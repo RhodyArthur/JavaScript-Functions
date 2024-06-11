@@ -36,3 +36,8 @@ function wordCount(str) {
   }
   return count;
 }
+
+//2. Array Transformations
+// a. doubles every number in an array
+arr = [2, 3, 4];
+const doubleArr = arr.map((i) => i * 2);
