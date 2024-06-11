@@ -78,3 +78,13 @@ function fullName(person) {
 }
 const name = { firstName: "Rhoda", lastName: "Rhoda" };
 console.log(fullName(name));
+
+// checks if a person is 18 years or older
+function isAdult(person) {
+  const { age } = person;
+  if (age >= 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
