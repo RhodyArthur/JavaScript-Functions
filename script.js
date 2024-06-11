@@ -13,3 +13,17 @@ function reverse(str) {
   }
   return reversedString;
 }
+
+//c. Palindrome: checks if a string is a palindrome
+function isPalindrome(str) {
+  let word = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    word += str[i];
+  }
+
+  if (word === str) {
+    return `${word} is a palindrome`;
+  } else {
+    return `${word} is not a palindrome`;
+  }
+}
