@@ -48,3 +48,13 @@ const filterArray = arr.filter(i => {
     return i;
   }
 });
+
+// c. calculates the sum of all numbers in an array
+// const totalSum = arr.reduce((total, currentItem) => total + currentItem);
+function sum(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
