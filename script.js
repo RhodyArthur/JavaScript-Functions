@@ -68,3 +68,13 @@ function average(arr) {
   return total / arr.length;
 }
 console.log(average(arr));
+
+// Object Transformations
+// Returns the full name of a person object (given properties firstName and lastName).
+
+function fullName(person) {
+  const { firstName, lastName } = person;
+  return `${firstName}, ${lastName}`;
+}
+const name = { firstName: "Rhoda", lastName: "Rhoda" };
+console.log(fullName(name));
