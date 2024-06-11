@@ -27,3 +27,12 @@ function isPalindrome(str) {
     return `${word} is not a palindrome`;
   }
 }
+
+//d. counts the number of words in a string
+function wordCount(str) {
+  let count = 0;
+  for (let i of str) {
+    count += 1;
+  }
+  return count;
+}
