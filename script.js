@@ -40,4 +40,11 @@ function wordCount(str) {
 //2. Array Transformations
 // a. doubles every number in an array
 arr = [2, 3, 4];
-const doubleArr = arr.map((i) => i * 2);
+const doubleArr = arr.map(i => i * 2);
+
+// b. filters out even numbers from an Array
+const filterArray = arr.filter(i => {
+  if (i % 2 === 0) {
+    return i;
+  }
+});
