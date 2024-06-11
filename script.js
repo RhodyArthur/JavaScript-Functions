@@ -105,3 +105,13 @@ function filterByAge(people, minAge) {
     return age <= minAge;
   });
 }
+
+// combine functions to double even numbers and add
+function compose(...fns) {
+  return function (initialValue) {
+    return fns.reduceRight((accumulator, fn) => fn(accumulator), initialValue);
+  };
+}
+
+const doubleEvenNumbersandSum = compose(sum, double, filterEven);
+
