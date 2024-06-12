@@ -4,7 +4,15 @@ function capitalize(str) {
   if (str.length === 0){
     return 'Empty Strings not allowed'
   }
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  let capitalizedWord = ''
+  for(let i=0; i < str.length; i++){
+    if(i === 0){
+      capitalizeWord += str.charAt(0).toUppercase();
+  }else {
+      capitalizedWord += str.charAt(i);
+  }
+}
+  return capitalizedWord;
 }
 
 
