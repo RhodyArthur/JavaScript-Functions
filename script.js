@@ -7,9 +7,9 @@ function capitalize(str) {
   let capitalizedWord = ''
   for(let i=0; i < str.length; i++){
     if(i === 0){
-      capitalizeWord += str.charAt(0).toUppercase();
+      capitalizeWord += str[0].toUppercase();
   }else {
-      capitalizedWord += str.charAt(i);
+      capitalizedWord += str[i];
   }
 }
   return capitalizedWord;
