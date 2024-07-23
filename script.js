@@ -1,39 +1,38 @@
 // String Transformations
 // a. Capitalizes the first letter of a string
 function capitalize(str) {
-  if (str.length === 0){
-    return 'Empty Strings not allowed'
+  if (str.length === 0) {
+    return 'Empty Strings not allowed';
   }
-  let capitalizedWord = ''
-  for(let i=0; i < str.length; i++){
-    if(i === 0){
-      capitalizeWord += str[0].toUppercase();
-  }else {
+  let capitalizedWord = '';
+  for (let i = 0; i < str.length; i++) {
+    if (i === 0) {
+      capitalizedWord += str[0].toUpperCase();
+    } else {
       capitalizedWord += str[i];
+    }
   }
-}
   return capitalizedWord;
 }
 
-
-//b. reverses a string
+// b. reverses a string
 function reverse(str) {
-  if (str.length === 0){
-    return 'Empty Strings not allowed'
+  if (str.length === 0) {
+    return 'Empty Strings not allowed';
   }
-  let reversedString = "";
+  let reversedString = '';
   for (let i = str.length - 1; i >= 0; i--) {
     reversedString += str[i];
   }
   return reversedString;
 }
 
-//c. Palindrome: checks if a string is a palindrome
+// c. Palindrome: checks if a string is a palindrome
 function isPalindrome(str) {
-  if (str.length === 0){
-    return 'Empty Strings not allowed'
+  if (str.length === 0) {
+    return 'Empty Strings not allowed';
   }
-  let word = "";
+  let word = '';
   for (let i = str.length - 1; i >= 0; i--) {
     word += str[i];
   }
@@ -45,11 +44,11 @@ function isPalindrome(str) {
   }
 }
 
-//d. counts the number of words in a string
+// d. counts the number of words in a string
 function wordCount(str) {
   let count = 0;
-  if (str.length === 0){
-    return 'Empty Strings not allowed'
+  if (str.length === 0) {
+    return 'Empty Strings not allowed';
   }
   for (let i of str) {
     count += 1;
@@ -57,7 +56,7 @@ function wordCount(str) {
   return count;
 }
 
-//2. Array Transformations
+// 2. Array Transformations
 // a. doubles every number in an array
 function double(arr) {
   return arr.map((i) => i * 2);
@@ -69,7 +68,6 @@ function filterEven(arr) {
 }
 
 // c. calculates the sum of all numbers in an array
-// const totalSum = arr.reduce((total, currentItem) => total + currentItem);
 function sum(arr) {
   let total = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -86,7 +84,6 @@ function average(arr) {
   }
   return total / arr.length;
 }
-
 
 // Object Transformations
 // Returns the full name of a person object (given properties firstName and lastName).
@@ -110,7 +107,7 @@ function isAdult(person) {
 function filterByAge(people, minAge) {
   return people.filter((person) => {
     const { age, name } = person;
-    return age <= minAge;
+    return age >= minAge;
   });
 }
 
@@ -123,3 +120,18 @@ function compose(...fns) {
 
 const doubleEvenNumbersandSum = compose(sum, double, filterEven);
 
+module.exports = {
+  capitalize,
+  reverse,
+  isPalindrome,
+  wordCount,
+  double,
+  filterEven,
+  sum,
+  average,
+  fullName,
+  isAdult,
+  filterByAge,
+  compose,
+  doubleEvenNumbersandSum,
+};
